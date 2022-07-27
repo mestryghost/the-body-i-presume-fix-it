@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+
+
+body {margin: 0;
+      padding: 0;
+      height: auto;
+      width: 100%;
+      background-color: #202020;}
+user agent stylesheet
+body {display: block;
+      margin: 8px;}
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+#bottom_cart_icon {height: 8vh;
+                   width: 8vh;
+                   background-color: #f83131;
+                   color: #cccccc;
+                   position: fixed;
+                   z-index: 2;
+                   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+                   bottom: 5vh;
+                   display: none;
+                   right: 5vh;
+                   margin-left: -40vh;
+                   border-radius: 50%;
+                   font-weight: bold;}
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+
+#web_message {height: 10vh;
+              width: 80vh;
+              background-color: #000000;
+              color: #cccccc;
+              position: fixed;
+              z-index: 2;
+              box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+              bottom: -25vh;
+    /* display: none; */
+              left: 50%;
+              margin-left: -40vh;
+              border-radius: 15px;
+              font-weight: bold;}
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+#shopping-cart-background {background-color: #000000a5;
+                           height: 100vh;
+                           width: 100vw;
+                           position: fixed;
+                           z-index: 1;
+                           display: none;}
+
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+#custom-burger-background {background-color: #000000a5;
+                           height: 100vh;
+                           width: 100vw;
+                           position: fixed;
+                           z-index: 1;
+                           display: none;}
+
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+.home {width: inherit;}
+
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+      
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+
+
+.div_print {display: none;}
+
+user agent stylesheet
+div {display: block;}
+html {margin: 0;
+      padding: 0;
+     font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+.OrderConfrimation {position: fixed; 
+                    width: auto;
+                    height: auto;
+                    background-color: #202020;
+                    padding: 40px;
+                    color: #cccccc;}
+
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+div#full_screen_loader {background-color: rgba(27, 27, 27, 0.591);
+                        position: fixed;
+                        z-index: 6;
+                        display: none;
+                        height: 100vh;
+                        width: 100%;
+                        top: 0;
+                        left: 0;}
+
+user agent stylesheet
+div {display: block;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+
+
+
+
+
+script {display: none;}
+
+html {margin: 0;
+      padding: 0;
+      font-family: bodytext;}
+
+::-webkit-scrollbar {width: 0.5vw;}
+
+::-webkit-scrollbar-thumb {background: #cccccc;}
+
+::-webkit-scrollbar-track {background: #202020;}
+
+    </style>
+</head>
+<body style="cursor: default;">   
+
+    <!-- HTML Page //Other content you wouldn't like to print -->
+
+    <div id="web_message" class="messagebb">
+        <h3 id="msgtxt">Added to cart</h3>
+    </div>
+    <div id="shopping-cart-background">
+        <div class="shopping-cart">
+            <div class="shopping-cart-top">
+                <h2>shopping cart</h2>
+                <h1 onclick="cart(0)">x</h1>
+            </div>
+            <div id="shopping-cart-center" class="shopping-cart-center">
+               <!-- this part will be populated by the items the client selects -->
+            </div>
+            <div class="shopping-cart-bottom">
+                
+                <svg onclick="cart(0)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M492,236H68.442l70.164-69.824c7.829-7.792,7.859-20.455,0.067-28.284c-7.792-7.83-20.456-7.859-28.285-0.068
+                            l-104.504,104c-0.007,0.006-0.012,0.013-0.018,0.019c-7.809,7.792-7.834,20.496-0.002,28.314c0.007,0.006,0.012,0.013,0.018,0.019
+                            l104.504,104c7.828,7.79,20.492,7.763,28.285-0.068c7.792-7.829,7.762-20.492-0.067-28.284L68.442,276H492
+                            c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"></path>
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <h2 id="customer_total">KES:<strong id="total_Price"></strong></h2>
+                <input id="customer_name" type="text" placeholder="name(s)">
+                <input id="customer_number" type="number" placeholder="phone number">
+                <button id="print_receipt" onclick="confirmOrder('print_receipt');">
+                    Confirm Order
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div id="custom-burger-background">
+        <div class="custom-burger">
+            <div class="custom-burger-top">
+                <h2>custom-burger</h2>
+                <h1 onclick="cart(3)">x</h1>
+            </div>
+            <div id="custom-burger-center" class="custom-burger-center">
+               <form method="post" class="custom-burger-items-background">
+                <fieldset>
+                    <div class="custom-burger-item">
+                        <span>Buns</span>
+                        <div>
+                            <span>toasted</span>
+                            <input type="checkbox" name="buns" value="toasted" id="toasted_buns" onclick="customBurgerPrice('toasted_buns',25)" unchecked="">
+                        </div>
+                        <div>
+                            <span>untoasted</span>
+                            <input type="checkbox" name="buns" value="untoasted" id="untoasted_buns" onclick="customBurgerPrice('untoasted_buns',20)" unchecked="">
+                        </div>
+                      
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item">
+                        <span>cheese</span>
+                        <div>
+                            <span>single cheese</span>
+                            <input type="checkbox" name="cheese" value="single cheese" id="single_cheese" onclick="customBurgerPrice('single_cheese',30)" unchecked="">
+                        </div>
+                        <div>
+                            <span>Double Cheese</span>
+                            <input type="checkbox" name="cheese" value="double cheese" id="double_cheese" onclick="customBurgerPrice('double_cheese',50)" unchecked="">
+                        </div>
+                        
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item">
+                        <span>Tomatoes</span>
+                        <div>
+                            <span>Raw</span>
+                            <input type="checkbox" name="tomatoes" value="raw" id="raw_tomatoes" onclick="customBurgerPrice('raw_tomatoes',5)" unchecked="">
+                        </div>
+                        <div>
+                            <span>grilled</span>
+                            <input type="checkbox" name="tomatoes" value="grilled" id="grilled_tomatoes" onclick="customBurgerPrice('grilled_tomatoes',15)" unchecked=""> 
+                        </div>
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item">
+                        <span>Onions</span>
+                        <div>
+                            <span>raw</span>
+                            <input type="checkbox" name="onions" value="raw" id="raw_onions" onclick="customBurgerPrice('raw_onions',5)" unchecked="">
+                        </div>
+                        <div>
+                            <span>caramelised</span>
+                            <input type="checkbox" name="onions" value="caramelised" id="caramelised_onions" onclick="customBurgerPrice('caramelised_onions',15)" unchecked="">
+                        </div>
+                        
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item">
+                        <span>Beef patty</span>
+                        <div>
+                            <span>chilli</span>
+                            <input type="checkbox" name="beefpatty" value="chilli" id="chilli_patty" onclick="customBurgerPrice('chilli_patty',70)" unchecked="">
+                        </div>
+                        <div>
+                            <span>sweet n' sour</span>
+                            <input type="checkbox" name="beefpatty" value="sweet n' sour" id="sweet_n_sour" onclick="customBurgerPrice('sweet_n_sour',70)" unchecked="">
+                        </div>
+                        <div>
+                            <span>Regular</span>
+                            <input type="checkbox" name="beefpatty" value="regular" id="regular_patty" onclick="customBurgerPrice('regular_patty',50)" unchecked=""> 
+                        </div>
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item">
+                        <span>Egg</span>
+                        <div>
+                            <span>fried</span>
+                            <input type="checkbox" name="egg" value="fried" id="fried_egg" onclick="customBurgerPrice('fried_egg',25)" unchecked="">
+                        </div>
+                        <div>
+                            <span>sunny side up</span>
+                            <input type="checkbox" name="egg" value="Sunny side up" id="sunny_side_up_egg" onclick="customBurgerPrice('sunny_side_up_egg',25)" unchecked="">
+                        </div>
+                    
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item  nb-brdr">
+                        <span>sauces</span>
+                        <div>
+                            <span>chilli</span>
+                            <input type="checkbox" name="sauces" value="chilli" id="chilli_sauce" onclick="customBurgerPrice('chilli_sauce',10)" unchecked="">
+                        </div>
+                        <div>
+                            <span>BBQ</span>
+                            <input type="checkbox" name="sauces" value="bbq" id="bbq_sauce" onclick="customBurgerPrice('bbq_sauce',15)" unchecked="">
+                        </div>
+                        <div>
+                            <span>Ketchup</span>
+                            <input type="checkbox" name="sauces" value="Ketchup" id="ketchup_sauce" onclick="customBurgerPrice('ketchup_sauce',10)" unchecked=""> 
+                        </div>
+                    </div>
+                 
+                </fieldset> 
+                <fieldset>
+                    <div class="custom-burger-item nb-brdr">
+                        <span>Lettuce</span>
+                        <div>
+                            <span>lettuce leaf</span>
+                            <input type="checkbox" name="lettuce" value="lettuce" id="lettuce" onclick="customBurgerPrice('lettuce',5)" unchecked="">
+                        </div>
+                      
+                    </div>
+                 
+                </fieldset> 
+               </form>
+            </div>
+            <div class="custom-burger-bottom">
+                
+                <svg onclick="cart(3)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M492,236H68.442l70.164-69.824c7.829-7.792,7.859-20.455,0.067-28.284c-7.792-7.83-20.456-7.859-28.285-0.068
+                            l-104.504,104c-0.007,0.006-0.012,0.013-0.018,0.019c-7.809,7.792-7.834,20.496-0.002,28.314c0.007,0.006,0.012,0.013,0.018,0.019
+                            l104.504,104c7.828,7.79,20.492,7.763,28.285-0.068c7.792-7.829,7.762-20.492-0.067-28.284L68.442,276H492
+                            c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"></path>
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <h2 id="customer_total">KES:<strong id="total_customBurger_Price">0</strong></h2>
+                
+                <button onclick="cart(4)">
+                    Add Burger to cart
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div class="home">
+        <div class="full_header fixed">
+            <div id="announcement" style="height: 4vw; display: grid;"><span>Make orders monday to friday before 11 a.m</span><h2 onclick="Announcement(0,0);">x</h2></div>
+            <div id="header" class="header">
+            <div class="logo">
+                
+                <h1>Zux Burgers</h1>
+            </div>
+            <div class="nav">
+                <span onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' }); ">home</span>            
+                <span onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });">our menu</span>
+                <span>recipes</span>
+                <span onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });">contact us</span>
+            </div>
+            <div onclick="cart(1)" class="cart-icon">
+                <!--?xml version="1.0" encoding="iso-8859-1"?-->
+                <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="cart_icon_top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 424.449 424.449" style="top: calc(4vw + 5vh);" xml:space="preserve">
+                <g>
+                    <g>
+                        <g>
+                            <circle cx="170.241" cy="374.273" r="50.176"></circle>
+                            <path d="M316.673,324.098L316.673,324.098c-27.711,0-50.176,22.465-50.176,50.176s22.465,50.176,50.176,50.176
+                                c27.711,0,50.176-22.465,50.176-50.176S344.384,324.098,316.673,324.098z"></path>
+                            <path d="M402.177,272.897H140.545l-5.12-29.696h215.04c6.326,0.019,12.017-3.843,14.336-9.728l51.2-129.024
+                                c3.111-7.892-0.766-16.812-8.658-19.922c-1.808-0.713-3.735-1.076-5.678-1.07H108.801L96.513,12.801
+                                c-1.262-7.471-7.784-12.906-15.36-12.8h-58.88c-8.483,0-15.36,6.877-15.36,15.36s6.877,15.36,15.36,15.36h46.08l44.032,260.096
+                                c1.262,7.471,7.784,12.906,15.36,12.8h274.432c8.483,0,15.36-6.877,15.36-15.36C417.537,279.774,410.66,272.897,402.177,272.897z
+                                "></path>
+                        </g>
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+
+            </div>
+            </div>
+        </div>
+        
+    <div id="home" class="home-contents">
+        <div id="details_top" class="details-top">
+         <h2>Top tier burgers</h2>   
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut 
+                aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse 
+                cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in 
+                culpa qui officia deserunt mollit anim id est 
+                laborum.</p>
+                <div class="btm-btn-spc">
+                    <div class="signatures">
+                        <div class="mwania ">
+                            <span>Mwania</span>
+                            <div class="sign">
+                                <div class="act-sign">mwania</div>
+                                <div class="underline">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mwania ">
+                            <span>Zuki</span>
+                            <div class="sign">
+                                <div class="act-sign">zuki</div>
+                                <div class="underline">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btm-buttons">
+                        <span id="custom_burger_btn" onclick="cart(5);">Make a custom burger</span>
+                        <button onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });">Order a burger</button>
+                    </div>
+                </div>
+               
+        </div>
+        <div id="burger_image_main" class="image">
+            <img onload="document.fonts.ready.then(function(){
+              loadingFullScreen(0);
+            });" src="/assets/images/burgermain.png">
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <h1>our menu</h1>
+        <div class="category">
+            <span class="category-name">specials</span>
+            <div class="flavour">
+                <div class="name-of-burger">
+                    chilli burger
+                </div>
+                <div class="image-recipe">
+                    <div class="img">
+                        <img src="/assets/images/burger1.png">
+                    </div>
+                    <div class="recipe">
+                         <li>- Whole meal bun</li>
+                         <li>- Caramelized onions</li>
+                         <li>- Grilled tomatoes</li>
+                         <li>- Lettuce</li>
+                         <li>- Large chilli flavoured beef patty</li>
+                         <li>- Sunny side up fried egg</li>
+
+                        </div>
+                </div>
+                <div class="price-btn">
+                    <div class="price">
+                        <span>Kes 200</span>
+                    </div>
+                    <div class="cart-btm-btn">
+                        <button id="chilli_burger" onclick="createBurger(1)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flavour">
+                <div class="name-of-burger">
+                    sweet and sour burger
+                </div>
+                <div class="image-recipe">
+                    <div class="img">
+                        <img src="../assets/images/burger2.png">
+                    </div>
+                    <div class="recipe">
+                         <li>- Whole meal bun</li>
+                         <li>- Caramelized onions</li>
+                         <li>- Grilled tomatoes</li>
+                         <li>- Lettuce</li>
+                         <li>- Large sweet and sour flavoured beef patty</li>
+                         <li>- Sunny side up fried egg</li>
+                    </div>
+                </div>
+                <div class="price-btn">
+                    <div class="price">
+                        <span>Kes 200</span>
+                    </div>
+                    <div class="cart-btm-btn">
+                        <button id="sweet_and_sour_burger" onclick="createBurger(2)">Add to cart</button>
+        </div>
+        
+    </div>
+
+   
+</div>
+        </div>
+        <div class="category-line">
+        </div>
+        <div class="category">
+            <span class="category-name">Originals</span>
+            <div class="flavour">
+                <div class="name-of-burger">
+                    Basic burger
+                </div>
+                <div class="image-recipe">
+                    <div class="img">
+                        <img src="../assets/images/burger3.png">
+                    </div>
+                    <div class="recipe">
+                         <li>- Whole meal bun</li>
+                         <li>- Caramelized onions</li>
+                         <li>- Cheese</li>
+                         <li>- Lettuce</li>
+                         <li>- Medium sized beef patty</li>
+                    </div>
+                </div>
+                <div class="price-btn bsc">
+                    <div class="price">
+                        <span>Kes 100</span>
+                    </div>
+                    <div class="cart-btm-btn">
+                        <button id="basic_burger" onclick="createBurger(3)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flavour">
+                <div class="name-of-burger">
+                    Regular burger
+                </div>
+                <div class="image-recipe">
+                    <div class="img">
+                        <img src="../assets/images/burger4.png">
+                    </div>
+                    <div class="recipe">
+                         <li>- Whole meal bun</li>
+                         <li>- Caramelized onions</li>
+                         <li>- Cheese</li>
+                         <li>- Lettuce</li>
+                         <li>- Medium sized beef patty</li>
+                    </div>
+                </div>
+                <div class="price-btn bsc">
+                    <div class="price">
+                        <span>Kes 150</span>
+                    </div>
+                    <div class="cart-btm-btn">
+                        <button id="regular_burger" onclick="createBurger(4)">Add to cart</button>
+        </div>
+        
+    </div>
+
+   
+</div>
+        </div>
+    </div> 
+        
+<div id="contact" class="footer">
+ <div class="footer-top">
+  <div class="footer-left">
+    <div class="logo-left">
+      <h1>Zux Burgers</h1>
+    </div>
+    <div class="slogan-left">
+        <span>Top tier burgers</span>
+    </div>
+    <div class="footer-signatures">
+        <div class="mwania btm-mwania">
+            <span>Mwania</span>
+            <div class="sign">
+                <div class="act-sign">mwania</div>
+                <div class="underline">
+
+                </div>
+            </div>
+        </div>
+        <div class="mwania btm-mwania">
+            <span>Zuki</span>
+            <div class="sign">
+                <div class="act-sign">zuki</div>
+                <div class="underline">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </div> 
+  
+    <div class="footer-right">
+        <div class="header-right">
+            <h2>Reach out</h2>
+        </div>
+        <div class="details">
+            <div class="details-left">
+                <div class="send-email">
+                    <span>Shoot us an email by filling in the form</span>
+                </div>
+                <div class="text-us">
+                    <span>Text us at:<br> +254712076831</span>
+                </div>   
+                <div class="socials">
+                    <span>You can reach us via our socials</span>
+                </div>
+              
+            </div>
+            <div class="details-right">
+                <div class="details-right-top">
+                   <span class="msg">Name:</span>
+                   <input id="name_of_sender">
+                   <span class="msg">Email:</span>
+                   <input id="email_of_sender">
+                   <span class="msg">Message:</span>
+                   <textarea class="message" cols="30" rows="5" id="message_of_sender"></textarea>
+
+                   
+                </div>
+               
+               
+
+            </div>
+            <div class="social-icons">
+                   
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m123.832031 475.464844c39.558594 23.804687 84.789063 36.351562 131.261719 36.351562 140.824219 0 256.90625-114.914062 256.90625-255.910156 0-140.832031-115.917969-255.90625-256.90625-255.90625-140.558594 0-254.910156 114.800781-254.910156 255.90625 0 47.09375 12.550781 92.667969 36.351562 132.257812l-36.535156 123.835938zm-93.65625-219.558594c0-124.570312 100.898438-225.917969 224.917969-225.917969 125.121094 0 226.917969 101.347657 226.917969 225.917969 0 124.574219-101.796875 225.917969-226.917969 225.917969-43.054688 0-84.894531-12.195313-120.984375-35.273438l-5.765625-3.683593-83.988281 24.78125 24.777343-83.992188-3.683593-5.761719c-23.078125-36.097656-35.273438-78.277343-35.273438-121.988281zm0 0"></path><path d="m124.628906 208.753906c4.953125 26.011719 19.65625 76.042969 62.464844 118.851563 42.808594 42.808593 92.839844 57.515625 118.855469 62.46875 29.789062 5.671875 73.503906 6.527343 94.867187-14.835938l11.910156-11.910156c6.011719-6.011719 9.324219-14.007813 9.324219-22.511719s-3.3125-16.496094-9.324219-22.507812l-47.628906-47.628906c-6.015625-6.015626-14.007812-9.324219-22.511718-9.324219-8.503907 0-16.496094 3.308593-22.511719 9.324219l-11.90625 11.90625c-7.273438 7.273437-21.003907 7.304687-28.332031.089843l-47.507813-49.5c-.070313-.074219-.140625-.148437-.214844-.21875-7.285156-7.285156-7.285156-19.140625 0-26.425781l11.90625-11.90625c12.445313-12.445312 12.445313-32.582031 0-45.023438l-47.628906-47.628906c-12.410156-12.410156-32.605469-12.410156-45.019531 0l-11.90625 11.910156v-.003906c-17.050782 17.054688-22.734375 53.40625-14.835938 94.875zm36.042969-73.664062c12.5-12.214844 11.832031-12.449219 13.210937-12.449219.472657 0 .945313.179687 1.304688.539063 50.1875 50.457031 48.171875 47.492187 48.171875 48.9375 0 .503906-.183594.945312-.539063 1.304687l-11.910156 11.90625c-18.964844 18.964844-19.039062 49.664063-.121094 68.714844l47.535157 49.53125c.074219.070312.144531.144531.21875.21875 18.960937 18.960937 51.808593 19.023437 70.832031 0l11.90625-11.90625c.71875-.71875 1.890625-.71875 2.609375 0 50.1875 50.453125 48.171875 47.488281 48.171875 48.933593 0 .507813-.183594.945313-.539062 1.304688l-11.910157 11.90625c-8.160156 8.160156-34.152343 13.042969-68.054687 6.585938-22.625-4.3125-66.128906-17.085938-103.257813-54.214844-37.128906-37.128906-49.902343-80.632813-54.210937-103.257813-6.460938-33.902343-1.578125-59.898437 6.582031-68.054687zm0 0"></path></svg>
+            
+           
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m75 512h362c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-362c-24.8125 0-45-20.1875-45-45zm0 0"></path><path d="m256 391c74.4375 0 135-60.5625 135-135s-60.5625-135-135-135-135 60.5625-135 135 60.5625 135 135 135zm0-240c57.898438 0 105 47.101562 105 105s-47.101562 105-105 105-105-47.101562-105-105 47.101562-105 105-105zm0 0"></path><path d="m406 151c24.8125 0 45-20.1875 45-45s-20.1875-45-45-45-45 20.1875-45 45 20.1875 45 45 45zm0-60c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"></path></svg>
+            
+           
+                <svg viewBox="0 -47 512.00004 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 55.964844c-32.207031 1.484375-31.503906 1.363281-35.144531 1.667968l19.074219-54.472656s-59.539063 21.902344-74.632813 25.820313c-39.640625-35.628907-98.5625-37.203125-140.6875-11.3125-34.496094 21.207031-53.011719 57.625-46.835937 100.191406-67.136719-9.316406-123.703126-41.140625-168.363282-94.789063l-14.125-16.964843-10.554687 19.382812c-13.339844 24.492188-17.769531 52.496094-12.476563 78.851563 2.171875 10.8125 5.863282 21.125 10.976563 30.78125l-12.117188-4.695313-1.4375 20.246094c-1.457031 20.566406 5.390625 44.574219 18.320313 64.214844 3.640625 5.53125 8.328125 11.605469 14.269531 17.597656l-6.261719-.960937 7.640625 23.199218c10.042969 30.480469 30.902344 54.0625 57.972657 67.171875-27.035157 11.472657-48.875 18.792969-84.773438 30.601563l-32.84375 10.796875 30.335938 16.585937c11.566406 6.324219 52.4375 27.445313 92.820312 33.78125 89.765625 14.078125 190.832031 2.613282 258.871094-58.664062 57.308594-51.613282 76.113281-125.03125 72.207031-201.433594-.589844-11.566406 2.578125-22.605469 8.921875-31.078125 12.707031-16.964844 48.765625-66.40625 48.84375-66.519531zm-72.832031 48.550781c-10.535157 14.066406-15.8125 32.03125-14.867188 50.578125 3.941407 77.066406-17.027343 136.832031-62.328125 177.628906-52.917968 47.660156-138.273437 66.367188-234.171875 51.324219-17.367187-2.722656-35.316406-8.820313-50.171875-14.910156 30.097656-10.355469 53.339844-19.585938 90.875-37.351563l52.398438-24.800781-57.851563-3.703125c-27.710937-1.773438-50.785156-15.203125-64.96875-37.007812 7.53125-.4375 14.792969-1.65625 22.023438-3.671876l55.175781-15.367187-55.636719-13.625c-27.035156-6.621094-42.445312-22.796875-50.613281-35.203125-5.363281-8.152344-8.867188-16.503906-10.96875-24.203125 5.578125 1.496094 12.082031 2.5625 22.570312 3.601563l51.496094 5.09375-40.800781-31.828126c-29.398437-22.929687-41.179687-57.378906-32.542969-90.496093 91.75 95.164062 199.476563 88.011719 210.320313 90.527343-2.386719-23.183593-2.449219-23.238281-3.074219-25.445312-13.886719-49.089844 16.546875-74.015625 30.273438-82.453125 28.671874-17.621094 74.183593-20.277344 105.707031 8.753906 6.808593 6.265625 16.015625 8.730469 24.632812 6.589844 7.734375-1.921875 14.082031-3.957031 20.296875-6.171875l-12.9375 36.945312 16.515625.011719c-3.117187 4.179688-6.855469 9.183594-11.351562 15.183594zm0 0"></path></svg>
+            
+        </div>
+            <div class="submit-btn">
+                   <button onclick="send_mail()">Submit</button>
+               </div>
+        </div>
+    </div>
+   </div>
+ <div class="underline"></div>
+    <div class="footer-bottom">
+        <div class="year-logo">
+            <div class="bottom-logo">
+        <span>Zux Burgers</span>
+    </div>
+    <div class="year">
+        <span>Copyright<strong> © </strong>2020</span>
+    </div>
+    <div class="creator">
+        <span>Created by <a href="https://www.instagram.com/leonkoech">@leonkoech</a></span>
+    </div>
+        </div>
+    
+    <div onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' }); " class="back-to-top">
+        <span>Back to top</span>
+        <!--?xml version="1.0" encoding="iso-8859-1"?-->
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<g>
+<g>
+    <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093 		"></polygon>
+</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+    </div>
+     </div>
+</div>
+</div>
+
+
+
+<div id="div_print" class="div_print">
+
+<div class="OrderConfrimation">    <h1>Zux Burgers</h1>   <h2>Invoice</h2> 
+    <div class="order-name">        
+    <strong>Order No.</strong>   <strong>:</strong>        <strong id="order_number"></strong>        
+    <strong>Name</strong>        <strong>:</strong>        <strong id="order_name"></strong>
+    <strong>Date</strong>        <strong>:</strong>        <strong id="order_date"></strong>
+    <strong>Time</strong>        <strong>:</strong>        <strong id="order_time"></strong>   
+                 </div>  
+                   <div class="order-title">        <strong>Item</strong>        <strong>Qty</strong>        <strong>Price</strong>    </div>    <ul id="order-details">       <li>            <span>chili Burger</span>            <span>2</span>            <span>400</span>        </li>    </ul>    <div class="order-total">        <strong>Total</strong>        <strong>Kes</strong>        <strong id="invoice_total">400</strong>    </div>    <div class="order-thankyou"><span style="font-weight: bold;">Thank you for supporting our biz<br>Come again soon</span>
+   
+    </div> 
+</div>
+</div>
+<div id="full_screen_loader" style="display: none;"><div class="loader_full"></div></div>
+
+
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script> -->
+
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+
+<script>
+  //   const firebase = require("firebase");
+// Required for side-effects
+// require("firebase/firestore");
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyDm7DeoX4hcpWZSF7h_IzhxJwuN3tQaCjI",
+authDomain: "zux-burgers.firebaseapp.com",
+databaseURL: "https://zux-burgers.firebaseio.com",
+projectId: "zux-burgers",
+storageBucket: "zux-burgers.appspot.com",
+messagingSenderId: "172008523913",
+appId: "1:172008523913:web:9c225ade8ef74021e0de58"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+fetchAnnouncement()
+
+
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+function Announcement(params,message) {
+
+if(params==0){
+    // hide announcement
+    document.getElementById('announcement').style.height=0+'vw';
+     document.getElementById('announcement').style.display='none';
+  // do the footer a favour
+  var footerTopMargin=document.getElementById('contact').style.marginTop;
+  document.getElementById('contact').style.marginTop = 'calc('+footerTopMargin+' px - ( 20 + vh ) )'; 
+            if(width<845){
+                document.getElementById('cart_icon_top').style.top=25+'%';//in phones 4vw on laptops
+            }
+            else{
+            document.getElementById('cart_icon_top').style.top='calc(5vh)';//in phones 4vw on laptops
+            } 
+    
+}
+else{
+    // show announcement
+  
+    if(width<845){
+        document.getElementById('announcement').style.height=10+'vw';//in phones 4vw on laptops
+    }
+   else{
+    document.getElementById('announcement').style.height=4+'vw';//in phones 4vw on laptops
+   }
+    document.getElementById('announcement').style.display='grid';
+    
+    document.getElementById('announcement').innerHTML="<span>"+message+"</span><h2 onClick='Announcement(0,0);'>x</h2>";
+    if(width<845){
+        document.getElementById('cart_icon_top').style.top=55+'%';//in phones 4vw on laptops
+    }
+   else{
+    document.getElementById('cart_icon_top').style.top='calc(+4vw + 5vh)';//in phones 4vw on laptops
+   } 
+    
+    
+    
+    
+   
+}
+
+}
+
+
+function writeBurgerOrderData(orderNo,name,number,date,time,itemList) {
+//   reference to the database
+var zux_base = firebase.database();
+// get the ate of today
+
+var db = firebase.firestore();
+// turn things to a loading screen
+loadingScreen();
+db.collection("burgerOrders").doc(orderNo).set({
+    name: name,
+    items: itemList,
+    date: date,
+    time:time,
+    phone : number,
+    orderNo:orderNo,
+    // approved will be whether they approve the order and are working on it
+    approved:'0',
+    // completed will be whether the good has been delivered and the payment made
+    completed:'0',
+    // a time stamp of the current time
+    timestamp:firebase.firestore.FieldValue.serverTimestamp()
+})
+.then(function() {
+    // console.log("Document successfully written!");
+   
+    // write custom burger if it exists
+    writeCustomBurger(orderNo);
+     // show the sucess page
+    sucessCart();
+})
+.catch(function(error) {
+console.error("Error making the order: ", error);
+// handle error here
+// ie dont display the thenkss page
+errorCart(error);
+
+});
+}
+function fetchAnnouncement  ()  {
+
+
+var db = firebase.firestore();
+// turn things to a loading screen
+loadingFullScreen(1);
+db.collection("webMessages").where('activity', '==', true).get().then((snapshot)=>{
+   
+    if(snapshot.empty){
+        console.log('dum dum want gum gum');
+        Announcement(0,'');
+    }
+    else{
+         snapshot.docs.forEach(doc => {
+        var entries=doc.data();
+     
+        if (entries.activity==true) {
+            Announcement(1,entries.message);
+        }
+        
+    });
+    }
+   
+    
+});
+     
+
+}
+
+function loadingFullScreen(param){
+
+var loader = document.getElementById('full_screen_loader');
+if(param==1){
+loader.innerHTML='<div class="loader_full"></div>';
+loader.style.display="block";
+}
+else{
+loader.style.display="none";
+}
+
+
+
+}
+function writeCustomBurger(orderNo) {
+// first check if the orde total of the custom burger is null/empty/0
+var customBurgerTotal=parseInt(document.getElementById('total_customBurger_Price').innerHTML);
+if (customBurgerTotal==0) {
+    // no custom burger in the inventory, do nothing
+} 
+else if (customBurgerTotal>0) {
+    // the custom burger price is more than 0. add it to the database/firestore
+     //   reference to the database
+
+    // get the fieldset value of each partitiion of the burger
+
+    var buns=getchecked('buns');
+    var cheese=getchecked('cheese');
+    var tomatoes=getchecked('tomatoes');
+    var onions=getchecked('onions');
+    var beefpatty=getchecked('beefpatty')
+    var egg=getchecked('egg');
+    var sauces=getchecked('sauces');
+    var lettuce=getchecked('lettuce');
+
+    // create a dict that will hold all the custom burger Details
+    var custom_burger_details={};
+    // populate the dict with values
+    custom_burger_details['buns']=buns!=''?buns:'none';
+    custom_burger_details['onions']=onions!=''?onions:'none';
+    custom_burger_details['beefpatty']=beefpatty!=''?beefpatty:'none';
+    custom_burger_details['egg']=egg!=''?egg:'none';
+     custom_burger_details['sauces']=sauces!=''?sauces:'none';
+    custom_burger_details['lettuce']=lettuce!=''?lettuce:'none';
+
+    var zux_base = firebase.database();
+   
+
+
+    var db = firebase.firestore();
+    // turn things to a loading screen
+    db.collection("customBurgerOrders").doc(orderNo).set({
+    orderNo:orderNo,
+    orderDetails:JSON.stringify(custom_burger_details),       
+    
+})
+.then(function() {
+    // console.log("Document successfully written!");
+    // show the sucess page
+    sucessCart();
+    // write custom burger if it exists
+})
+.catch(function(error) {
+console.error("Error making the order: ", error);
+// handle error here
+// ie dont display the thenkss page
+errorCart(error);
+
+});
+}
+
+}
+function getchecked(params) {
+myarr=[]
+$("input:checkbox[name="+params+"]:checked").each(function(){
+    myarr.push($(this).val());
+});
+return myarr;
+ 
+}
+
+
+
+
+function checkcartItems(name){
+// console.log(name)
+
+
+try {
+
+    document.getElementById(name).addEventListener("click",function(){ removeFromcart(name) });
+    document.getElementById(name+'input').addEventListener("change",function(){ changeprice(name) });
+    
+
+} catch (error) {
+    // type error. when items have not yet been set
+    // console.log(error);
+
+}
+}
+function refreshCart() {
+document.getElementById('customer_total').style.display='block';
+
+document.getElementById('customer_name').style.display='block';
+
+document.getElementById('customer_number').style.display='block';
+
+document.getElementById('print_receipt').style.display='block';
+
+document.getElementById('print_receipt').innerHTML='Confirm Order';
+
+//give the buttton an on click listener event
+
+
+// var json={'1': 'chiliBurger', '2': 'sweetandsourBurger', '3':  'basic','4': 'regular'};
+
+makeUL();
+
+checkcartItems('chiliBurger');
+checkcartItems('sweetandsourBurger');
+checkcartItems('basic');
+checkcartItems('regular');
+checkcartItems('custom');
+
+}
+function cart(param) {
+   shoppingcart=document.getElementById('shopping-cart-background');
+   // Add the contents of json to #foo:
+    customburger=document.getElementById('custom-burger-background');
+   if (param==0) {
+    //    close cart cancel
+    shoppingcart.style.display='none';
+    
+   }
+   if (param==1) {
+    //    open cart
+     shoppingcart.style.display='block';
+     // refresh the total of the cart
+    calculateTotal('total_Price');
+    // refresh the cart
+    refreshCart();
+    // loadingScreen()
+
+    }
+    if (param==2) {
+    //    submit cart
+    // shoppingcart.style.display='none';
+    // validate that the price is more than zero
+    // that the phone number and name field is filled. If not turn the background of the respective input to red 
+    // after validating send the form to the email, with the subject 'ORDER NUMBER #random number' 
+    // and the message would be the details of the order , the phone number and the Name
+    if (validateCart()==true) {
+        // when form has been validated
+       
+        // send order details via email
+         // name of the person
+         populateInvoice();
+        var name_of_person=document.getElementById('customer_name').value;
+        // number of the person
+        var number_of_person=document.getElementById('customer_number').value;
+
+        var order_number=document.getElementById('order_number').innerHTML;
+        var date_today=document.getElementById('order_date').innerHTML;
+        var time_now=document.getElementById('order_time').innerHTML;
+        var order_list=allStorage();
+
+        writeBurgerOrderData(order_number,name_of_person,number_of_person,date_today,time_now,order_list)
+
+
+    } 
+    // console.log(document.getElementById('total_price').innerHTML)
+    }
+    if(param==3){
+        // open the custom burger panel
+        customburger.style.display='none';
+    }
+    if (param==4) {
+        // remove the display of the custom burger popup and open cart
+        customburger.style.display='none';
+        createBurger(5);
+       
+        cart(1);
+        // add the custom burger to the burger list with the price received
+        // and add it to session storage
+    }
+    if (param==5) {
+        // remove the custom burger display
+        
+        customburger.style.display='block';
+    }
+}
+function allStorage() {
+
+var values = [],
+keys = Object.keys(sessionStorage),
+i = keys.length;
+
+while ( i-- ) {
+values.push( sessionStorage.getItem(keys[i]));
+}
+
+return values;
+}
+function validateCart() {
+mybool=false;
+if (document.getElementById('total_Price').innerHTML>0) {
+    if (document.getElementById('customer_number').value!='') {        
+       if (document.getElementById('customer_name').value!='') {
+        // alert('yes');
+             mybool=true;
+       
+        
+        } 
+        else {
+            // when number has been filled but the name is empty
+            document.getElementById('customer_name').style.border='1px solid #f83131';
+            document.getElementById('customer_name').placeholder="Name(s) can't be empty";
+            document.getElementById('customer_name').classList.add('input-error');
+            error_web_message('Please fill in your name');
+        }
+    } 
+    else {
+        // when number is empty
+        document.getElementById('customer_number').style.border='1px solid #f83131';
+        
+        document.getElementById('customer_number').placeholder="Phone number can't be empty";
+        document.getElementById('customer_number').classList.add('input-error');
+        
+        if (document.getElementById('customer_name').value!='') {
+            // when only number is empty
+                error_web_message('Please fill in your number');
+        
+        } 
+        else {
+            // when both number and names are empty
+            document.getElementById('customer_name').style.border='1px solid #f83131';
+            document.getElementById('customer_name').placeholder="Name(s) can't be empty";
+            document.getElementById('customer_name').classList.add('input-error');
+            error_web_message('Please fill in your name and number');
+        }
+    }
+   
+
+}
+else{
+    error_web_message('cart is empty');
+   
+}
+ return mybool;
+}
+class Burger{
+constructor(burgername, price,quantity,newPrice) {
+this.burgername = burgername;
+this.price = price;
+this.quantity = quantity;
+this.newPrice=newPrice;
+}
+}
+
+function hideAddressBar(){
+if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
+document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+setTimeout(window.scrollTo(1,1),0);
+}
+
+
+
+$(document).ready(function() {
+
+// clear the session storage as a precaution
+sessionStorage.clear();
+
+// and because mobile deices are a hastle align to top of whatrever
+// document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+// scroll into view if it is a small screen
+// function to check if the fonts have loaded
+
+if(width<845){
+document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+window.addEventListener("load",function(){hideAddressBar();});
+window.addEventListener("orientationchange",function(){hideAddressBar();});
+    }
+else{
+window.scrollTo(0, 1);
+}
+
+
+});
+
+function loaded() {
+// once the assets have been loaded check for the loading of fonts
+document.fonts.ready.then(function(){
+loadingFullScreen(0);
+});
+};
+
+function createBurger(type) {
+   if (type==1) {
+        var btn=document.getElementById('chilli_burger');
+        // alert(btn.style.backgroundColor);
+        if (btn.style.backgroundColor=='rgb(143, 201, 58)') {
+
+            btn.innerHTML='Add to cart';
+            btn.style.backgroundColor='#f83131';
+            btn.style.color='#cccccc';
+            // remove product from shopping cart
+           sessionStorage.removeItem('chiliBurger');
+           web_message("Removed from cart");
+
+        }
+        else{
+            var Burgerselect= new Burger('Chili Burger','200','1','200');
+            var jsontostr=JSON.stringify(Burgerselect);
+            sessionStorage.setItem('chiliBurger',jsontostr);
+            web_message("Added to cart");
+            
+            //    add the item to the storage
+            // var cartval=sessionStorage.getItem('chiliBurger');
+            // var cartObj=JSON.parse(cartval);
+            // console.log(cartObj.price);
+            btn.innerHTML='Remove from cart';
+            btn.style.backgroundColor='#8FC93A';
+            btn.style.color='#202020';
+        }
+
+     
+        //  add it to cart
+        // change the button to be 'remove from cart' and write  that function
+
+   }
+   if (type==2) {
+        var btn=document.getElementById('sweet_and_sour_burger');
+
+        if (btn.style.backgroundColor=='rgb(143, 201, 58)') {
+
+                btn.innerHTML='Add to cart';
+                btn.style.backgroundColor='#f83131';
+                btn.style.color='#cccccc';
+                // remove product from shopping cart
+                sessionStorage.removeItem('sweetandsourBurger');
+                web_message("Removed from cart");
+                }
+                else{
+                    var Burgerselect= new Burger('Sweet & Sour Burger','200','1','200');
+       var jsontostr=JSON.stringify(Burgerselect);
+       sessionStorage.setItem('sweetandsourBurger',jsontostr);
+       web_message("Added to cart");
+                //    add the item to the storage
+                // var cartval=sessionStorage.getItem('chiliBurger');
+                // var cartObj=JSON.parse(cartval);
+                // console.log(cartObj.price);
+                btn.innerHTML='Remove from cart';
+                btn.style.backgroundColor='#8FC93A';
+                btn.style.color='#202020';
+                }
+       
+
+    //    var cartval=sessionStorage.getItem('sweetandsourBurger');
+    //    var cartObj=JSON.parse(cartval);
+    //      console.log(cartObj.price)
+         
+   }
+   if (type==3) {
+    var btn=document.getElementById('basic_burger');
+    if (btn.style.backgroundColor=='rgb(143, 201, 58)') {
+
+            btn.innerHTML='Add to cart';
+            btn.style.backgroundColor='#f83131';
+            btn.style.color='#cccccc';
+            // remove product from shopping cart
+            sessionStorage.removeItem('basic');
+            web_message("Removed from cart");
+            }
+            else{
+
+                var Burgerselect= new Burger('Basic Burger','100','1','100');
+                    var jsontostr=JSON.stringify(Burgerselect);
+                    sessionStorage.setItem('basic',jsontostr);
+                    web_message("Added to cart");
+            //    add the item to the storage
+            // var cartval=sessionStorage.getItem('chiliBurger');
+            // var cartObj=JSON.parse(cartval);
+            // console.log(cartObj.price);
+            btn.innerHTML='Remove from cart';
+            btn.style.backgroundColor='#8FC93A';
+            btn.style.color='#202020';
+     }
+
+
+       
+   }
+   if (type==4) {
+    var btn=document.getElementById('regular_burger');
+
+
+    if (btn.style.backgroundColor=='rgb(143, 201, 58)') {
+
+        btn.innerHTML='Add to cart';
+        btn.style.backgroundColor='#f83131';
+        btn.style.color='#cccccc';
+        // remove product from shopping cart
+        sessionStorage.removeItem('regular');
+        web_message("Removed from cart");
+
+        }
+    else{
+            var Burgerselect= new Burger('Regular Burger','150','1','150');
+                var jsontostr=JSON.stringify(Burgerselect);
+                sessionStorage.setItem('regular',jsontostr);
+                web_message("Added to cart");
+        //    add the item to the storage
+        // var cartval=sessionStorage.getItem('chiliBurger');
+        // var cartObj=JSON.parse(cartval);
+        // console.log(cartObj.price);
+        btn.innerHTML='Remove from cart';
+        btn.style.backgroundColor='#8FC93A';
+        btn.style.color='#202020';
+    }
+
+       
+   }
+//    custom burger
+if (type==5) {
+    // the price will be calculated based on mwania's catalog
+    var customBurgerPrice= document.getElementById('total_customBurger_Price').innerHTML;
+       var Burgerselect= new Burger('Custom Burger',customBurgerPrice,'1','150');
+        //  console.log(Burgerselect)
+        var button= document.getElementById('custom_burger_btn');
+    if (parseInt(customBurgerPrice)==0) {
+
+    button.innerHTML='Make a custom burger';
+    
+    
+    // remove product from shopping cart
+    // sessionStorage.removeItem('custom');
+    web_message("Removed from cart");
+
+    }
+    else{
+        var Burgerselect= new Burger('Custom Burger',customBurgerPrice,'1',customBurgerPrice);
+            var jsontostr=JSON.stringify(Burgerselect);
+            sessionStorage.setItem('custom',jsontostr);
+            web_message("Added to cart");
+    //    add the item to the storage
+    // var cartval=sessionStorage.getItem('chiliBurger');
+    // var cartObj=JSON.parse(cartval);
+    // console.log(cartObj.price);
+    button.innerHTML='Edit custom burger';
+   
+    }   
+   }
+}
+function populateInvoice(){
+//  <ul class="order-details">       
+    // <li>            
+        // <span>chili Burger</span>          
+        //  <span>2</span>           
+        //  <span>400</span>        
+    // </li>    
+// </ul>
+var order_items=document.getElementById('order-details');
+order_items.innerHTML="";
+        
+
+// name of the person
+// split then join to remove spaces
+var name_of_person=document.getElementById('customer_name').value;
+var new_name_of_person=name_of_person.split(' ').join('');
+// number of the person
+var number_of_person=document.getElementById('customer_name').value;
+// date today
+var today = new Date();
+var date_today=today.getFullYear()+(today.getMonth()+1)+today.getDate();
+var alphabet="ABCDEFGIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+// String with all details
+var long_string= new_name_of_person.toUpperCase()+number_of_person+date_today;
+//order number
+var order_number=createOrderNumber(alphabet)
+// this is when the user has clicked on print receipt
+// console.log(order_number)
+// then print a receipt of your creation
+// print('<div class="order-thankyou"><span style="font-weight: bold;">Thank you for supporting our biz<br>Come again soon</span> <div class="signature-order"> <div class="mwania sucessName confirmName"><span>Mwania</span><div class="sign sucessSign"><div class="act-sign">mwania</div><div class="underline sucessUnderline confirmUnderline"></div></div></div><div class="mwania zuki sucessName confirmName"><span>Zuki</span><div class="sign sucessSign"> <div class="act-sign">zuki</div><div class="underline sucessUnderline confirmUnderline"></div></div></div></div> </div></div></div>')
+// make sure you email the owners with the order details
+// populate receipt with useful info
+document.getElementById('order_number').innerHTML=order_number;
+document.getElementById('order_date').innerHTML=date_formatter(today.getFullYear())+'/'+date_formatter((today.getMonth()+1))+'/'+date_formatter(today.getDate());
+document.getElementById('order_time').innerHTML= date_formatter(today.getHours())  + ":" +date_formatter(today.getMinutes());
+document.getElementById('order_name').innerHTML=name_of_person;
+// populate item list with useful data
+
+if(Object.keys(sessionStorage).length>0){
+    for(var i = 0; i < Object.keys(sessionStorage).length; i++) {
+    // Create the list item:
+    var item = document.createElement('li');
+     // Set its contents:
+    var objContent=Object.values(Object.keys(sessionStorage))[i];
+    // you have the item key. use it to find a burger from the session
+    burgerDetails= JSON.parse(sessionStorage.getItem(objContent));
+    // console.log(burgerDetails)
+    var burgerName= burgerDetails.burgername;
+    var burgerPrice=burgerDetails.price;
+    var burgerQty=burgerDetails.quantity;
+
+    var name_of_burger_element = document.createElement("span");
+    var name_of_burger_text = document.createTextNode(burgerName);
+    name_of_burger_element.appendChild(name_of_burger_text);
+
+
+    var qty_of_burger_element = document.createElement("span");
+    var qty_of_burger_text = document.createTextNode(burgerQty);
+    qty_of_burger_element.appendChild(qty_of_burger_text);
+
+
+    var price_of_burger_element = document.createElement("span");
+    var price_of_burger_text = document.createTextNode(burgerPrice);
+    price_of_burger_element.appendChild(price_of_burger_text);
+
+    item.appendChild(name_of_burger_element);
+    item.appendChild(qty_of_burger_element);
+    item.appendChild(price_of_burger_element);
+
+    order_items.appendChild(item);
+}
+
+}
+}
+function makeUL() {
+// Create the list element:
+var list = document.getElementById('shopping-cart-center');
+list.innerHTML="";
+if(Object.keys(sessionStorage).length>0){
+    for(var i = 0; i < Object.keys(sessionStorage).length; i++) {
+    // Create the list item:
+    var item = document.createElement('li');
+    // item to be created 
+
+    //             <div class="cart-item">
+    //               <img src="burger1.png">
+    //               <span>basic burger</span>
+    //                <input type="number"  value="1">  
+    //                <span>400</span> 
+    //                  <svg></svg>
+    //             </div>
+    // Set its contents:
+    var objContent=Object.values(Object.keys(sessionStorage))[i];
+    // you have the item key. use it to find a burger from the session
+    burgerDetails= JSON.parse(sessionStorage.getItem(objContent));
+    // console.log(burgerDetails)
+    var burgerName= burgerDetails.burgername;
+    var burgerPrice=burgerDetails.price;
+    var burgerQty=burgerDetails.quantity;
+
+    var cartitem = document.createElement('div');
+    
+    cartitem.className = "cart-item "+objContent; 
+
+
+    var burgerImage = document.createElement('img');
+    if (burgerName=='Regular Burger') {
+        burgerImage.src='../assets/images/burger4.png';
+    }
+    if (burgerName=='Basic Burger') {
+        burgerImage.src='../assets/images/burger3.png';
+    }
+    if (burgerName=='Sweet & Sour Burger') {
+        burgerImage.src='../assets/images/burger2.png';
+    }
+    if (burgerName=='Chili Burger') {
+        burgerImage.src='../assets/images/burger1.png';
+    }
+    if (burgerName=='Custom Burger') {
+        burgerImage.src='../assets/images/customburger.png';
+    }
+    cartitem.appendChild(burgerImage)
+
+    var name_of_burger_container= document.createElement("div");
+    name_of_burger_container.className="cart_burger_text";
+    var name_of_burger_element = document.createElement("span");
+    var name_of_burger_text = document.createTextNode(burgerName);
+    name_of_burger_element.appendChild(name_of_burger_text);
+    name_of_burger_container.appendChild(name_of_burger_element);
+
+    cartitem.appendChild(name_of_burger_container);
+
+    var qty_input=document.createElement("input");
+    qty_input.type='number';
+    qty_input.value=burgerQty;
+    qty_input.id=objContent+'input';
+
+    cartitem.appendChild(qty_input);
+
+    var price_of_burger_container= document.createElement("div");
+    price_of_burger_container.className="cart_burger_text";
+    var price_of_burger_element = document.createElement("span");
+    var price_of_burger_text = document.createTextNode(burgerPrice);
+    price_of_burger_element.appendChild(price_of_burger_text);
+    price_of_burger_element.id=objContent+'price';
+    price_of_burger_container.appendChild(price_of_burger_element)
+
+    cartitem.appendChild(price_of_burger_container);
+
+    // var svg = '<?xml version="1.0" encoding="iso-8859-1"?><!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 424.449 424.449" style="enable-background:new 0 0 424.449 424.449;" xml:space="preserve"><g>	<g>		<g>			<circle cx="170.241" cy="374.273" r="50.176"/>			<path d="M316.673,324.098L316.673,324.098c-27.711,0-50.176,22.465-50.176,50.176s22.465,50.176,50.176,50.176	c27.711,0,50.176-22.465,50.176-50.176S344.384,324.098,316.673,324.098z"/>			<path d="M402.177,272.897H140.545l-5.12-29.696h215.04c6.326,0.019,12.017-3.843,14.336-9.728l51.2-129.024				c3.111-7.892-0.766-16.812-8.658-19.922c-1.808-0.713-3.735-1.076-5.678-1.07H108.801L96.513,12.801 c-1.262-7.471-7.784-12.906-15.36-12.8h-58.88c-8.483,0-15.36,6.877-15.36,15.36s6.877,15.36,15.36,15.36h46.08l44.032,260.096 				c1.262,7.471,7.784,12.906,15.36,12.8h274.432c8.483,0,15.36-6.877,15.36-15.36C417.537,279.774,410.66,272.897,402.177,272.897z"/>		</g>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>';
+    var svg = '<svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path id="XMLID_1089_" d="m428.332 135.275-11.167-33.466c-2.248-6.736-8.552-11.278-15.653-11.278h-291.024c-7.101 0-13.405 4.543-15.653 11.278l-11.167 33.466c-2.53 7.582 3.113 15.414 11.106 15.414h322.451c7.994 0 13.637-7.832 11.107-15.414z"/><path id="XMLID_835_" d="m135.615 491.767c1.28 11.519 11.016 20.233 22.606 20.233h193.718c11.59 0 21.326-8.715 22.606-20.233l34.565-311.077h-308.06z"/><path id="XMLID_831_" d="m225.89 42.998c0-7.167 5.831-12.998 12.998-12.998h44.189c7.167 0 12.998 5.831 12.998 12.998v17.533h30v-17.533c0-23.709-19.289-42.998-42.998-42.998h-44.189c-23.709 0-42.998 19.289-42.998 42.998v17.533h30z"/></g></svg>'
+    var container = document.createElement("div");
+    container.innerHTML = svg;
+
+    container.id=objContent;
+
+    cartitem.appendChild(container);
+
+   
+    // get the names of the items already present
+     divs = document.getElementsByClassName(objContent);
+
+     if (divs.length>0) {
+        //  console.log('duplicate entery. Discarding ...')
+     }
+     else if (divs.length==0){
+         
+         list.appendChild(cartitem);
+     }
+    
+}
+
+}
+else{
+    // the session is empty, therefore the cart is empty
+  
+
+    var emptytext=document.createElement('div');
+    emptytext.className='emptyText';
+    emptytext.innerHTML='<strong><h1>wauuu</h1><br>So much empty.<strong>';
+    list.appendChild(emptytext);
+    
+}
+
+
+}
+function removeFromcart(itemKey) {
+// console.log('deleting...');
+divs = document.getElementsByClassName('cart-item');
+switch (itemKey) {
+            case 'chiliBurger':
+            btnId='chilli_burger';
+                break;
+            case 'sweetandsourBurger':
+            btnId='sweet_and_sour_burger';
+                break;
+            case 'basic':
+            btnId='basic_burger';
+                break;
+            case 'regular':
+            btnId='regular_burger';
+                break;
+            case 'custom':
+            btnId='custom_burger';
+                break;
+            
+        }
+        //check if its custom
+        if (btnId=='custom_burger') {
+            // this is a custom burger
+
+        } else {
+            // this is a regular burger
+            var Add_to_cartbtn=document.getElementById(btnId);
+        }
+
+if (divs.length>1) {
+    try {
+        sessionStorage.removeItem(itemKey);
+        web_message("Removed from cart");
+
+        if (btnId=='custom_burger') {
+            // this is a custom burger
+
+        } else {
+            // this is a regular burger
+               // for regular burgers
+            if (Add_to_cartbtn.style.backgroundColor=='rgb(143, 201, 58)') {
+
+                Add_to_cartbtn.innerHTML='Add to cart';
+                Add_to_cartbtn.style.backgroundColor='#f83131';
+                Add_to_cartbtn.style.color='#cccccc';
+
+            }
+            else {
+
+
+                Add_to_cartbtn.innerHTML='Remove from cart';
+                Add_to_cartbtn.style.backgroundColor='#8FC93A';
+                Add_to_cartbtn.style.color='#202020';
+            }
+
+        }
+        // alert(btn.style.backgroundColor);
+     
+
+
+
+
+    }
+    catch(err) {
+    console.log(err);
+    // console.log(itemKey)
+    }
+}
+else if (divs.length==1){
+    
+    // console.log('deleting one item');
+    // console.log(Object.keys(sessionStorage));
+    // console.log(btnId)
+    sessionStorage.clear();
+    web_message("Removed from cart");
+
+    if (btnId=='custom_burger') {
+            // this is a custom burger
+
+        } 
+    else {
+          // alert(btn.style.backgroundColor);
+      if (Add_to_cartbtn.style.backgroundColor=='rgb(143, 201, 58)') {
+
+            Add_to_cartbtn.innerHTML='Add to cart';
+            Add_to_cartbtn.style.backgroundColor='#f83131';
+            Add_to_cartbtn.style.color='#cccccc';
+
+        }
+        else{
+
+
+                Add_to_cartbtn.innerHTML='Remove from cart';
+                Add_to_cartbtn.style.backgroundColor='#8FC93A';
+                Add_to_cartbtn.style.color='#202020';
+            }
+    }
+   
+}
+
+
+// bcg= sessionStorage.getItem(itemKey);
+// console.log(bcg)
+// refresh shopping cart
+ cart(0);
+cart(1);
+
+
+}
+function web_message(message) {
+var msg=document.getElementById('web_message');
+var msgtxt=document.getElementById('msgtxt');
+msg.style.backgroundColor='#000000';
+msgtxt.innerHTML=message;
+var pos = -25;
+var id = setInterval(frame, 3);
+function frame() {
+    if (pos == 5) {
+    clearInterval(id);
+    // reverse the animation now
+    // wait two seconds first
+    // sleep time expects milliseconds
+    function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
+    // Usage!
+    
+    sleep(700).then(() => {
+        // Do something after the sleep!
+        var position=5;
+    var px = setInterval(fin, 5);
+        function fin(){
+        if(position==-25){
+
+        }
+        else{
+            position --;
+            msg.style.bottom= position + 'vh';
+        }
+    }
+    });
+    } 
+    else {
+    pos++; 
+    msg.style.bottom = pos + 'vh'; 
+    
+    }
+}
+
+}
+function error_web_message(message) {
+var msg=document.getElementById('web_message');
+var msgtxt=document.getElementById('msgtxt');
+msg.style.backgroundColor='#f87c7c';
+msgtxt.innerHTML=message;
+var pos = -25;
+var id = setInterval(frame, 3);
+function frame() {
+    if (pos == 5) {
+    clearInterval(id);
+    // reverse the animation now
+    // wait two seconds first
+    // sleep time expects milliseconds
+    function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
+    // Usage!
+    
+    sleep(2500).then(() => {
+        // Do something after the sleep!
+        var position=5;
+    var px = setInterval(fin, 5);
+        function fin(){
+        if(position==-25){
+
+        }
+        else{
+            position --;
+            msg.style.bottom= position + 'vh';
+        }
+    }
+    });
+    } 
+    else {
+    pos++; 
+    msg.style.bottom = pos + 'vh'; 
+    
+    }
+}
+
+}
+var ScrollDetector = function()
+{
+"use strict";
+
+window.addEventListener( 'scroll', function() {
+  if(width<845){
+        document.getElementById('bottom_cart_icon').style.display='block';
+            }
+            else{
+
+              if( window.scrollY > window.innerHeight*0.5 &&  window.scrollY < 1737)
+    {
+        document.getElementById('bottom_cart_icon').style.display='block';
+    } else {
+      
+              document.getElementById('bottom_cart_icon').style.display='none';
+          
+          
+    }
+            }
+ 
+});
+};
+new ScrollDetector();
+function changeprice(name){
+var burgerVal=sessionStorage.getItem(name);
+var burgerObj=JSON.parse(burgerVal);
+//    original value=document.getElementById(name+'input').value
+val = parseInt(burgerObj.price)*document.getElementById(name+'input').value;
+burgerObj.newPrice=val.toString();
+document.getElementById(name+'price').innerHTML="";
+document.getElementById(name+'price').innerHTML=burgerObj.newPrice;
+burgerObj.quantity=document.getElementById(name+'input').value;
+var myjson=JSON.stringify(burgerObj);
+sessionStorage.setItem(name,myjson);
+
+//    console.log(sessionStorage.getItem(name));
+calculateTotal('total_Price');
+}
+function calculateTotal(element){
+// a function to refresh the total amount
+var totalPrice=document.getElementById(element);
+totalPrice.innerHTML="";
+var completeValue=0;
+for(var i = 0; i < Object.keys(sessionStorage).length; i++) {
+   
+        // Set its contents:
+    var objContent=Object.values(Object.keys(sessionStorage))[i];
+    // you have the item key. use it to find a burger from the session
+    burgerDetails= JSON.parse(sessionStorage.getItem(objContent));
+    // console.log(burgerDetails)
+    
+    completeValue+=parseInt(burgerDetails.newPrice);
+   
+}
+totalPrice.innerHTML=completeValue;
+// console.log(completeValue)
+}
+function sucessCart(){
+var shopping_cart_contents = document.getElementById('shopping-cart-center');
+var orderId=document.getElementById('order_number').innerHTML;
+
+var emptytext=document.createElement('div');
+    emptytext.className='emptyText';
+    var sctxt=document.createElement('div');
+    sctxt.className='successText';
+    signatures="<div class='signatures sucessSignatures pi-ph'><div class='mwania sucessName'><span>Mwania</span><div class='sign sucessSign'><div class='act-sign'>mwania</div><div class='underline sucessUnderline'></div></div></div><div class='mwania zuki sucessName'><span>Zuki</span><div class='sign sucessSign'> <div class='act-sign'>zuki</div><div class='underline sucessUnderline'></div></div></div></div>"
+    sctxt.innerHTML="<h1>Thenkssss</h1><br>Your order number is <b>"+orderId+"</b> <br>Your Order is being Processed<br>You will receive a call or text from either of us."+signatures;
+    shopping_cart_contents.innerHTML='';
+    emptytext.appendChild(sctxt);
+    shopping_cart_contents.appendChild(emptytext);
+
+    // make the inputs and price display none
+    document.getElementById('customer_total').style.display='none';
+   
+    document.getElementById('customer_name').style.display='none';
+
+    document.getElementById('customer_number').style.display='none';
+    document.getElementById('print_receipt').style.display='block';
+    document.getElementById('print_receipt').innerHTML='Print Invoice';
+}    
+function errorCart(errorCode){
+var shopping_cart_contents = document.getElementById('shopping-cart-center');
+
+var emptytext=document.createElement('div');
+    emptytext.className='emptyText';
+    var sctxt=document.createElement('div');
+    sctxt.className='successText';
+    // signatures="<div class='signatures sucessSignatures'><div class='mwania sucessName'><span>Mwania</span><div class='sign sucessSign'><div class='act-sign'>mwania</div><div class='underline sucessUnderline'></div></div></div><div class='mwania zuki sucessName'><span>Zuki</span><div class='sign sucessSign'> <div class='act-sign'>zuki</div><div class='underline sucessUnderline'></div></div></div></div>"
+    sctxt.innerHTML="<h1>Error</h1><br>Your order is could not be uploaded at this moment.<br>Please try again later.<br>error :"+errorCode;
+    shopping_cart_contents.innerHTML='';
+    emptytext.appendChild(sctxt);
+    shopping_cart_contents.appendChild(emptytext);
+
+    // make the inputs and price display none
+    document.getElementById('customer_total').style.display='none';
+   
+    document.getElementById('customer_name').style.display='none';
+
+    document.getElementById('customer_number').style.display='none';
+    document.getElementById('print_receipt').style.display='block';
+    document.getElementById('print_receipt').innerHTML='Print Invoice';
+}    
+
+
+
+function confirmOrder(buttonId) {
+// if (document.getElementById('print_receipt').innerHTML=='Print Invoice')
+if (document.getElementById('print_receipt').innerHTML=='Confirm Order'){
+cart(2);
+
+}
+else {
+
+// calculate total
+calculateTotal('invoice_total');
+// now print the order
+printdiv('div_print');
+// close the cart
+cart(0);
+}
+}
+
+function createOrderNumber(ranChar){
+var result           = '';
+var characters       = ranChar;
+var charactersLength = characters.length;
+for ( var i = 0; i < 10; i++ ) {
+  result += characters.charAt(Math.floor(Math.random() * charactersLength));
+}
+return result;
+}
+
+function printdiv(printpage) {
+        var headstr = "<html style=' background-color: #202020;    padding: 40px;    color: #cccccc;'><head><title></title></head><body style=' background-color: #202020;    padding: 40px;    color: #cccccc;'>";
+        var footstr = "</body>";
+        var newstr = document.all.item(printpage).innerHTML;
+        var oldstr = document.body.innerHTML;
+        document.body.innerHTML = headstr + newstr + footstr;
+        window.print();
+        document.body.innerHTML = oldstr;
+        return false;
+}
+function loadingScreen(){
+var shopping_cart_contents = document.getElementById('shopping-cart-center');
+
+var emptytext=document.createElement('div');
+emptytext.className='emptyText';
+var sctxt=document.createElement('div');
+sctxt.className='successText';
+sctxt.innerHTML='<div class="loader-container"><div class="loader"></div></div>';
+shopping_cart_contents.innerHTML='';
+emptytext.appendChild(sctxt);
+shopping_cart_contents.appendChild(emptytext);
+
+// make the inputs and price display none
+document.getElementById('customer_total').style.display='none';
+
+document.getElementById('customer_name').style.display='none';
+
+document.getElementById('customer_number').style.display='none';
+
+document.getElementById('print_receipt').style.display='none';
+}
+// calculate height before footer appears
+var headerHeight = document.getElementById('header').offsetHeight;
+var homeHeight = document.getElementById('details_top').offsetHeight + document.getElementById('burger_image_main').offsetHeight;
+var menuHeight = document.getElementById('menu').offsetHeight;
+var vh = window.innerHeight*0.1;
+
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+// if the width of the screen is less than 645 do this
+if (width<850) {
+document.getElementById('menu').style.marginTop= homeHeight+ headerHeight + "px"
+document.getElementById('burger_image_main').style.top= document.getElementById('details_top').offsetHeight + headerHeight + "px"  ;
+document.getElementById('contact').style.marginTop= headerHeight+homeHeight+menuHeight-5+"px";
+}
+
+// the send mail function to send mail
+function send_mail(){
+// start by verifying that the form is filled
+var name_of_sender= document.getElementById('name_of_sender');
+var message_of_sender= document.getElementById('message_of_sender');
+var email_sender= document.getElementById('email_of_sender');
+
+if (name_of_sender.value=='') {
+error_web_message("please fill in your name");
+}
+else if (email_of_sender.value=='') {
+error_web_message("please fill in your email");
+}
+else if (message_of_sender.value=='') {
+error_web_message("please fill in your message to us");
+}
+else{
+window.open('mailto:zuxburgers@gmail.com?subject=feedback from:  '+name_of_sender.value+'&body='+message_of_sender.value+'', '_blank');
+}
+
+}
+function date_formatter(string){
+while(string.toString().length<2){
+    string="0"+string;
+}
+return string;
+}
+
+function singlecheckbox(name) {
+var $box = $(this);
+if ($box.is(":checked")) {
+// the name of the box is retrieved using the .attr() method
+// as it is assumed and expected to be immutable
+var group = "input:checkbox[name="+name+"]";
+// the checked state of the group/box on the other hand will change
+// and the current value is retrieved using .prop() method
+$(group).prop("checked", false);
+$box.prop("checked", true);
+} else {
+$box.prop("checked", false);
+}
+}
+function customBurgerPrice(btnid,price){
+total=parseInt(document.getElementById('total_customBurger_Price').innerHTML);
+if(btnid=='toasted_buns' || btnid=='untoasted_buns'){
+    singlecheckbox('buns');
+}
+if(document.getElementById(btnid).checked==true){
+    // alert('alright')
+    total+=price;
+
+}
+else{
+    total-=price;
+}
+
+
+document.getElementById('total_customBurger_Price').innerHTML=total;
+}
+// function to click background and not foreground in order to close the popups
+$('#custom-burger-background').on('click', function(e) {
+if (e.target !== this)
+return;
+
+//  close the custom burger popup
+cart(3);
+});
+$('#shopping-cart-background').on('click', function(e) {
+if (e.target !== this)
+return;
+
+//  close the shopping cart popup
+cart(0);
+});
+</script>
+</body>
+</html>
